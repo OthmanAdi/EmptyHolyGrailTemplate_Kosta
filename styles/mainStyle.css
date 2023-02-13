@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.body {
+    height: 100vh;
+    background: #8EA7E9;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.NavBar {
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 1;
+}
+
+.Footer {
+    grid-column: 1 / span 12;
+    grid-row: 12 / span 1;
+}
+
+.RightSidePanel {
+    grid-column: 11 / span 2;
+    grid-row: 2 / span 10;
+}
+
+.LeftSidePanel {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 10;
+}
+
+.Content {
+    grid-column: 3 / span 8;
+    grid-row: 2 / span 10;
+}
+
+.el {
+    border: 1px rgba(0, 0, 0, 0.07) solid;
+}
