@@ -2,47 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>✨Simple Html,Css Layout✨</title>
-    <link rel="stylesheet" href="../styles/mainStyle.css" />
+  <meta charset="UTF-8">
+  <title>✨Simple Html,Css Layout✨</title>
+  <link rel="stylesheet" href="../styles/mainStyle.css" />
 </head>
 
 <body>
-    <div class="body MainPageWrapper">
-        <div class="el NavBar">
-            <div class="FlexNav">
-                <div class="NavBrand">
-                    <div class="NavLogo">
-                        <h1>
-                            <a href="#">
-                                LOGO
-                            </a>
-                        </h1>
-                    </div>
-                    <div class="Nav">
-                        <ul class="NavUl">
-                            <li class="NavUlLi">
-                                <a href="index.html">
-                                    Home
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="NavAction">
-                    <button class="NavBtn">
-                        Contact
-                    </button>
-                </div>
-            </div>
+  <div class="body MainPageWrapper">
+    <div class="el NavBar">
+      <div class="FlexNav">
+        <div class="NavBrand">
+          <div class="NavLogo">
+            <h1>
+              <a href="#">
+                LOGO
+              </a>
+            </h1>
+          </div>
+          <div class="Nav">
+            <ul class="NavUl">
+              <li class="NavUlLi">
+                <a href="index.html">
+                  Home
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="el Content">
-            <!-- <h1>Hello World</h1> -->
+        <div class="NavAction">
+          <button class="NavBtn">
+            Contact
+          </button>
         </div>
-        <div class="el LeftSidePanel"></div>
-        <div class="el RightSidePanel"></div>
-        <div class="el Footer"></div>
+      </div>
     </div>
+    <div class="el Content">
+      <!-- <h1>Hello World</h1> -->
+    </div>
+    <div class="el LeftSidePanel">
+      <div class="FunctionContainer">
+        <div class="TodoListFunction">
+          <button class="ShowTodoList">Create Todos ✏️</button>
+          <hr />
+          <p class="ButtonDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+        <div class="ContactFormFunction">
+          <button class="ShowContactForm">Say Hello! 😇</button>
+          <hr />
+          <p class="ButtonDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="el RightSidePanel"></div>
+    <div class="el Footer"></div>
+  </div>
+  <!-- JS Imports and Libs -->
+  <script src="../backend/script.js"></script>
 </body>
 
 </html>
