@@ -85,3 +85,11 @@
     padding-right: 5%;
     text-align: justify;
 }
+
+.TodoListWrapper {
+    display: block;
+}
+
+.TodosStyle {
+    list-style: none;
+}
