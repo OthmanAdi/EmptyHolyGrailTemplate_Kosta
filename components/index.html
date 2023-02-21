@@ -2,72 +2,103 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>✨Simple Html,Css Layout✨</title>
-  <link rel="stylesheet" href="../styles/mainStyle.css" />
+	<meta charset="UTF-8">
+	<title>✨Simple Html,Css Layout✨</title>
+	<link rel="stylesheet" href="../styles/mainStyle.css" />
 </head>
 
 <body>
-  <div class="body MainPageWrapper">
-    <div class="el NavBar">
-      <div class="FlexNav">
-        <div class="NavBrand">
-          <div class="NavLogo">
-            <h1>
-              <a href="#">
-                LOGO
-              </a>
-            </h1>
-          </div>
-          <div class="Nav">
-            <ul class="NavUl">
-              <li class="NavUlLi">
-                <a href="index.html">
-                  Home
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="NavAction">
-          <button class="NavBtn">
-            Contact
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="el Content">
-      <div class="TodoListWrapper" id="TodoListWrapper">
-        <div class="TodoListFunction">
-          <input id="TodoInput" type="text" placeholder="Write down your Todos Here ✍🏼">
-          <button onclick="AddTodo()" class="AddTodoBtn">➕</button>
-        </div>
-        <div class="TodoListBody">
-          <ul class="myUl"></ul>
-        </div>
-      </div>
-    </div>
-    <div class="el LeftSidePanel">
-      <div class="FunctionContainer">
-        <div class="TodoListFunction">
-          <button onclick="ShowTodos()" class="ShowTodoList">Create Todos ✏️</button>
-          <hr />
-          <p class="ButtonDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </div>
-        <div class="ContactFormFunction">
-          <button class="ShowContactForm">Say Hello! 😇</button>
-          <hr />
-          <p class="ButtonDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="el RightSidePanel"></div>
-    <div class="el Footer"></div>
-  </div>
-  <!-- JS Imports and Libs -->
-  <script src="../backend/script.js"></script>
+	<div class="body MainPageWrapper">
+		<div class="el NavBar">
+			<div class="FlexNav">
+				<div class="NavBrand">
+					<div class="NavLogo">
+						<h1>
+							<a href="#">
+								LOGO
+							</a>
+						</h1>
+					</div>
+					<div class="Nav">
+						<ul class="NavUl">
+							<li class="NavUlLi">
+								<a href="index.html">
+									Home
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="NavAction">
+					<button class="NavBtn">
+						Contact
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="el Content">
+			<div class="TodoListWrapper" id="TodoListWrapper">
+				<div class="TodoListFunction">
+					<input id="TodoInput" type="text" placeholder="Write down your Todos Here ✍🏼">
+					<button onclick="AddTodo()" class="AddTodoBtn">➕</button>
+				</div>
+				<div class="TodoListBody">
+					<ul class="myUl"></ul>
+				</div>
+			</div>
+			<!-- Contact Form Html -->
+			<form id="contact_form">
+				<!-- Sender Name -->
+				<label>
+					<input type="text" name="from_name" placeholder="Tell us who you are 😇">
+				</label>
+
+				<!-- Sender Email -->
+				<label>
+					<input type="email" name="from_email" placeholder="Where to find you?">
+				</label>
+
+				<!-- Sender Message -->
+				<label>
+					<input type="text" name="message" placeholder="Your Message ✉️">
+				</label>
+
+				<!-- Submit Button -->
+				<button type="submit" class="sbmtButton">Send Form 🚀</button>
+			</form>
+		</div>
+		<div class="el LeftSidePanel">
+			<div class="FunctionContainer">
+				<div class="TodoListFunction">
+					<button onclick="ShowTodos()" class="ShowTodoList">Create Todos ✏️</button>
+					<hr />
+					<p class="ButtonDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					</p>
+				</div>
+				<div class="ContactFormFunction">
+					<button class="ShowContactForm">Say Hello! 😇</button>
+					<hr />
+					<p class="ButtonDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="el RightSidePanel"></div>
+		<div class="el Footer"></div>
+	</div>
+	<!-- JS Imports and Libs -->
+	<script src="../backend/script.js"></script>
+
+	<!-- CDN for EmailJs -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+	</script>
+	<!-- This function should Initialize EmailJs with the Public Api Key -->
+	<script type="text/javascript">
+		// IIFE
+		(function () {
+			emailjs.init("OkNwYMKMmL7-yiKIP");
+		})();
+	</script>
 </body>
 
 </html>
