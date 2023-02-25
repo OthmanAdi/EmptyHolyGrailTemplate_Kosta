@@ -86,7 +86,7 @@
     text-align: justify;
 }
 
-.TodoListWrapper {
+.TodoListWrapper, #contact_form {
     display: block;
 }
 
