@@ -4,17 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <title>✨Simple Html,Css Layout✨</title>
-    <link rel="stylesheet" href="../styles/mainStyle.css" />
+    <link rel="stylesheet" href="../styles/mainStyle.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="body MainPageWrapper">
-        <div class="el NavBar"></div>
-        <div class="el Content"></div>
-        <div class="el LeftSidePanel"></div>
-        <div class="el RightSidePanel"></div>
-        <div class="el Footer"></div>
+<div class="body MainPageWrapper">
+    <div class="el NavBar">
+        <div class="FlexNav">
+            <div class="NavBrand">
+                <div class="NavLogo">
+                    <h1>
+                        <a href="#">
+                            LOGO
+                        </a>
+                    </h1>
+                </div>
+                <div class="Nav">
+                    <ul class="NavUl">
+                        <li class="NavUlLi">
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="NavAction">
+                <button class="NavBtn btn btn-outline-dark btn-sm">
+                    Contact
+                </button>
+            </div>
+        </div>
     </div>
+    <div class="el Content">
+        <div class="TodoListWrapper" id="TodoListWrapper">
+            <div class="TodoListFunction">
+                <div class="row">
+                    <div class="col-10">
+                        <input class="form-control" id="TodoInput" type="text"
+                               placeholder="Write down your Todos Here ✍🏼">
+                    </div>
+                    <div class="col-2">
+                        <button onclick="AddTodo()" class="btn btn-primary btn-sm AddTodoBtn">➕</button>
+                    </div>
+                </div>
+            </div>
+            <div class="TodoListBody">
+                <ul class="myUl"></ul>
+            </div>
+        </div>
+        <!-- Contact Form Html -->
+        <form id="contact_form">
+            <!-- Sender Name -->
+            <label>
+                <input required class="form-control" type="text" name="from_name" placeholder="Tell us who you are 😇">
+            </label>
+
+            <!-- Sender Email -->
+            <label>
+                <input required class="form-control" type="email" name="from_email" placeholder="Where to find you?">
+            </label>
+
+            <!-- Sender Message -->
+            <label>
+                <input required class="form-control" type="text" name="message" placeholder="Your Message ✉️">
+            </label>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-danger btn-sm sbmtButton">Send Form 🚀</button>
+        </form>
+    </div>
+    <div class="el LeftSidePanel">
+        <div class="FunctionContainer">
+            <div class="TodoListFunction">
+                <button onclick="ShowTodos()" class="btn btn-secondary ShowTodoList">Create Todos ✏️</button>
+                <hr/>
+                <p class="ButtonDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+            <div class="ContactFormFunction">
+                <button onclick="ShowForm()" class="btn btn-secondary ShowContactForm">Say Hello! 😇</button>
+                <hr/>
+                <p class="ButtonDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="el RightSidePanel"></div>
+    <div class="el Footer"></div>
+</div>
+<!-- JS Imports and Libs -->
+<script src="../backend/script.js"></script>
+
+<!-- CDN for EmailJs -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<!-- This function should Initialize EmailJs with the Public Api Key -->
+<script type="text/javascript">
+    // IIFE
+    (function () {
+        emailjs.init("OkNwYMKMmL7-yiKIP");
+    })();
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
