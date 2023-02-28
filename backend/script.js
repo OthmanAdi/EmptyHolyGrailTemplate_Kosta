@@ -3,8 +3,8 @@ let todoListUl = document.querySelector(".myUl");
 let todoListWrapper = document.getElementById("TodoListWrapper");
 let ContactFormWrapper = document.getElementById("contact_form");
 
-let ServiceId = "service_kcgd7yr";
-let TemplateId = "template_ef4bxwe";
+let ServiceId = "service_7mx8nld";
+let TemplateId = "template_epdqyxp";
 let formSubmitButton = document.querySelector(".sbmtButton");
 let theForm = document.getElementById("contact_form");
 
